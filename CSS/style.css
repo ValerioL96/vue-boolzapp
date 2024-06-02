@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+section.chat-wrapper div.contact-chat{
+    display: flex;
+    justify-content: space-between;
+}
+
+section.chat-wrapper div.contact{
+    display: flex;
+    align-items: center;
+}
+section.chat-wrapper div.contact >img{
+    width: 50px;
+    border-radius: 100%;
+}
+
+section.chat-wrapper div.contact >div.text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}

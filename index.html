@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp con Vue</title>
+
+    <!--custome style-->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    
+    <main>
+        <div id="app">
+            <div class="container">
+                <section class="chat-wrapper">
+                    <article>
+                        <div class="contact-chat">
+                            
+                            <div class="contact">
+                                <img :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name">
+                                <div class="text">
+
+                                    <h3>
+                                        {{contacts[activeIndex].name}}
+                                    </h3>
+                                    <p>ultimo accesso</p>
+
+                                </div>
+                               
+                            </div>
+                           
+                        </div>
+                       
+                    </article>
+
+                </section>
+
+                <section class="messages-contacts">
+
+                </section>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Vue-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--Javascript-->
+    <script src="./JS/script.js"></script>
+</body>
+</html>

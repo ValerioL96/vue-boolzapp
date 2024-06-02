@@ -1,25 +1,5 @@
-Milestone 1
 
-1) Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse:
-
-1.1) Creo in html due sezioni in cui in una avrò i messaggi con i conttati e nell'altra la chat dei singoli:
-
-- < div id="app">
-            < div class="container">
-                < section class="chat-wrapper">
-                    
-
-                < /section>
-
-                < section class="messages-contacts">
-
-                < /section>
-            </div>
-        </div>
-
-1.2) creo in javascript una lista dei contatti in cui mi do anche un indice iniziale:
-
-- const { createApp } = Vue
+  const { createApp } = Vue
 
   createApp({
     data() {
@@ -193,60 +173,3 @@ Milestone 1
       }
     }
   }).mount('#app')
-
-1.3) nella sezione chat creo il collegamento con il contatto con indice 0:
-
-- < section class="chat-wrapper">
-        < article>
-            < div class="contact-chat">
-                            
-                < div class="contact">
-                    < img :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name">
-                    < div class="text">
-
-                        < h3>
-                            {{contacts[activeIndex].name}}
-                        < /h3>
-                        < p>ultimo accesso< /p>
-
-                    < /div>
-                               
-                < /div>
-                           
-            < /div>
-        < /article>
-
-  < /section>
-
-1.4) creo nella sezione chat-wrapper un div.chat
-
-- < section class="chat-wrapper">
-        < article>
-             < div class="contact-chat">
-                            
-                < div class="contact">
-                    < img :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name">
-                    < div class="text">
-
-                        < h3>
-                            {{contacts[activeIndex].name}}
-                        < /h3>
-                        < p>ultimo accesso< /p>
-
-                    < /div>
-                               
-                < /div>
-                           
-            < /div>
-
-                    < div class="chat">
-                    < /div>
-
-            < /div>
-        < /article>
-
-  < /section>
-
-2) Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
-
-                    
