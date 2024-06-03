@@ -269,6 +269,26 @@ Milestone 1
         < /article>
     < /div>
 
-2) Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
+2) Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto:
+
+2.1) creo  nella section.messages-contacts un div.contacts in cui aggiungo una lista ul che sarà collegata  tramite v-for al mio array a cui darò degli index:
+
+-  < div class="contacts">
+        < ul>
+            < li v-for="item in contacts" :key="index" class="flex">
+                < img class="picture-contact" :src="item.avatar" alt="item.name">
+                < div class="text">
+    
+                    < h3>
+                        {{item.name}}
+                    < /h3>
+                    < p>ultimo messaggio inviato< /p>
+    
+                < /div>
+
+            < /li>
+        < /ul>
+   < /div>
+
 
                     
