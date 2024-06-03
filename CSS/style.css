@@ -62,6 +62,10 @@ article.toolbar>i{
     margin-right: 1rem;
 }
 
+div.contacts>ul{ 
+    list-style-type: none;
+}
+
 
 /*colonna chat*/
 
