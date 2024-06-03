@@ -249,6 +249,26 @@ Milestone 1
     
  < /section>
 
+ 1.5) creo nel div.chat due artcle in cui in uno aggiungo due div, per i messaggi di invio e quelli ricevuti con classi differenti per dare posizione e colore differente in chat, mentre nell'altro article aggiungo la barra testo che successivamente mi servirà per aggiungere nuovo contenuto in chat:
+
+ - < div class="chat">
+        < article class="chat-view">
+            < div class="sent flex">
+                < p>Hai portato a spasso il cane?< /p>
+                < p>Ricordati di stendere i panni< /p>
+            < /div>
+            < div class="received flex">
+                < p>Tutto fatto!< /p>
+            < /div>
+
+        < /article>
+        < article class="write-message flex">
+            < i class="fa-regular fa-face-smile">< /i>
+            < input type="text" name="sent-message" id="sent-message" placeholder="Scrivi un messaggio">
+            < i class="fa-solid fa-microphone">< /i>
+        < /article>
+    < /div>
+
 2) Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
 
                     
