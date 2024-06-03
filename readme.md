@@ -197,55 +197,57 @@ Milestone 1
 1.3) nella sezione chat creo il collegamento con il contatto con indice 0:
 
 - < section class="chat-wrapper">
-        < article>
-            < div class="contact-chat">
-                            
-                < div class="contact">
-                    < img :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name">
-                    < div class="text">
-
-                        < h3>
-                            {{contacts[activeIndex].name}}
-                        < /h3>
-                        < p>ultimo accesso< /p>
-
-                    < /div>
-                               
+    < div class="contact-chat flex">
+                        
+        < article class="picture-name flex">
+            < img class="picture-contact" :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name">
+                < div class="text">
+    
+                    < h3>
+                        {{contacts[activeIndex].name}}
+                    < /h3>
+                    < p>ultimo accesso oggi alle 12:00< /p>
+    
                 < /div>
-                           
-            < /div>
         < /article>
-
-  < /section>
+        < article class="toolbar flex">
+            < i class="fa-solid fa-magnifying-glass">< /i>
+            < i class="fa-solid fa-paperclip">< /i>
+            < i class="fa-solid fa-ellipsis-vertical">< /i>
+        < /article>
+                       
+    < /div>
+    
+ < /section>
 
 1.4) creo nella sezione chat-wrapper un div.chat
 
 - < section class="chat-wrapper">
-        < article>
-             < div class="contact-chat">
-                            
-                < div class="contact">
-                    < img :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name">
-                    < div class="text">
-
-                        < h3>
-                            {{contacts[activeIndex].name}}
-                        < /h3>
-                        < p>ultimo accesso< /p>
-
-                    < /div>
-                               
+    < div class="contact-chat flex">
+                        
+        < article class="picture-name flex">
+            < img class="picture-contact" :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name">
+                < div class="text">
+    
+                    < h3>
+                        {{contacts[activeIndex].name}}
+                    < /h3>
+                    < p>ultimo accesso oggi alle 12:00< /p>
+    
                 < /div>
-                           
-            < /div>
-
-                    < div class="chat">
-                    < /div>
-
-            < /div>
         < /article>
+        < article class="toolbar flex">
+            < i class="fa-solid fa-magnifying-glass">< /i>
+            < i class="fa-solid fa-paperclip">< /i>
+            < i class="fa-solid fa-ellipsis-vertical">< /i>
+        < /article>
+                       
+    < /div>
 
-  < /section>
+    < div class="chat">
+    < /div>
+    
+ < /section>
 
 2) Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
 
