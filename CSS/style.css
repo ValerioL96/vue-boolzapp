@@ -82,3 +82,53 @@ article.picture-name>.text{
 article.picture-name .text>p{
     color: hsl(0deg 0% 69.41%); 
 }
+
+article.chat-view{
+    
+    background-image: url(../img/mine.jpg);
+    padding: 3rem 4rem 16.6rem;
+}
+
+article.chat-view> .sent{
+    flex-direction: column;
+    align-items: end;
+}
+
+article.chat-view .sent>p{
+    background-color: hsl(94.29deg 84% 85.29%);
+    margin-bottom: 1rem ;
+    border-radius: .7rem;
+    padding: 1rem 3rem 1rem 1rem;
+}
+
+
+article.chat-view> .received{
+    flex-direction: column;
+    align-items: start;
+}
+
+article.chat-view .received>p{
+    background-color:hsl(0deg 0% 100%);
+    margin-bottom: 1rem ;
+    border-radius: .7rem;
+    padding: 1rem 3rem 1rem 1rem;
+}
+
+article.write-message{
+    justify-content: space-around;
+    background-color: hsl(26.67deg 27.27% 93.53%);
+    align-items: center;
+    padding: 1rem;
+}
+
+article.write-message>input{
+   width: 80%;
+   padding: 1rem;
+   border-radius: .7rem;
+   border: transparent;
+}
+
+article.write-message>i{
+    font-size: 1.5rem;
+    color: hsl(22.5deg 3.25% 48.24%);
+ }
