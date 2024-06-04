@@ -352,8 +352,58 @@ Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare 
 
 
 Milestone 3
-Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+
+1) Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde:
+
+1.1) creo una funzione che mi aggiunga un nuovo task:
+
+- methods:{
+        changeContacts: function(contactsIndex){
+            this.activeIndex = contactsIndex;
+        },
+        addNewTask: function(){
+            const newTask={
+                message: '',
+                status: 'sent'
+            }
+          }
+    }
+
+1.2) aggiungo un v-modell al mio input in chat per creare un collegamento tra l'input e la variabile, che aggiungo nel data:
+
+-  < input type="text" name="sent-message" id="sent-message" placeholder="Scrivi un messaggio" 
+           v-model= "newTaskMessage">
+
+-  newTaskMessage:'',
+
+1.3) creo una variabile nella funzione in modo che ogni volta che la chiama la passa:
+
+-  methods:{
+        changeContacts: function(contactsIndex){
+            this.activeIndex = contactsIndex;
+        },
+        addNewTask: function(newMessage){
+            const newTask={
+                message: newMessage,
+                status: 'sent'
+            }
+            this.contacts.push(newTask);
+            this.clearNewTask();
+          },
+          clearNewTask: function(){
+            this.newTaskMessage= '';
+          }
+    }
+
+1.4) vado ad aggiungere in input la funzione keyup.enter:
+
+- < input type="text" name="sent-message" id="sent-message" placeholder="Scrivi un messaggio" 
+           v-model= "newTaskMessage"
+           @keyup.enter = "addNewTask(newTaskMessage)">
+ 
+
+
+2) Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 
 Milestone 4
 Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
