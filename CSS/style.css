@@ -34,7 +34,7 @@ div#app{
 section.messages-contacts{
     width: 35%;
     height: 100%;
-    border: solid 1px gray;
+    border: solid 1px hsl(0deg 0% 90.98%);
 }
 
 
@@ -83,6 +83,7 @@ img.picture-contact{
     padding: .5rem 1rem;
     justify-content: center;
     align-items: center;
+    background-color: hsl(0deg 0% 96.47%);
     
     
 }
@@ -92,6 +93,7 @@ img.picture-contact{
     padding: .5rem;
     font-size: 1rem;
     color: rgb(189 186 187);
+    border: transparent;
 }
 
 article.picture-name{
@@ -113,20 +115,34 @@ article.toolbar>i{
 
 div.contacts{
     height: calc(100% - 170px);
-    background-color: rgb(247, 206, 206);
+    background-color: hsl(0deg 0% 100%);
+    overflow-y: scroll;
 }
 
 div.contacts>ul{ 
     list-style-type: none;
 }
 
+div.contacts ul>li{ 
+    border-top:solid .1rem hsl(0deg 0% 90.98%) ;
+    padding: 1rem;
+}
+
+div.contacts ul li>.text{
+    margin-left: 1rem;
+}
+
+
+div.contacts ul li .text>p{
+    color: hsl(255deg 10.34% 77.25%);
+}
 
 /*colonna chat*/
 
 section.chat-wrapper{
     width: 65%;
     height: 100%;
-    border: solid 1px gray;
+    border: solid 1px hsl(0deg 0% 90.98%);
 }
 
 .contact-chat{
@@ -144,10 +160,15 @@ article.picture-name .text>p{
     color: hsl(0deg 0% 69.41%); 
 }
 
+.chat{
+    height: calc(100% - 60px);
+}
+
 article.chat-view{
     
     background-image: url(../img/mine.jpg);
-    padding: 3rem 4rem 16.6rem;
+    height: calc(100% - 60px);
+    padding: 3rem 4rem;
 }
 
 article.chat-view> .sent{
@@ -176,6 +197,7 @@ article.chat-view .received>p{
 }
 
 article.write-message{
+    height: 60px;
     justify-content: space-around;
     background-color: hsl(26.67deg 27.27% 93.53%);
     align-items: center;
