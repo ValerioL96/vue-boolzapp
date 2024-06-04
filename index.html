@@ -20,94 +20,98 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="flex">
 
-    <div id="app">
-        <div class="container flex">
+    <div id="app" class="flex">
+        
+        
+        <section class="messages-contacts">
+            <div class="mycontact flex">
+                <article class=" picture-name flex">
+                    <img class="picture-contact" src="./img/avatar_io.jpg" alt="my contact picture">
+                    <h3 >Sofia</h3>
+                </article>
+                <article class="toolbar flex">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </article>
+                
+            </div>
+            <div class="notifications flex">
+                <article class="bell-slash">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    
+                </article>
+                <article class="active-notifications flex">
+                    <h3 >Ricevi notifiche di nuovi messaggi</h3>
+                    <p>Attiva notifiche desktop</p>
+                </article>
+                
 
-            <section class="messages-contacts">
-                <div class="mycontact flex">
-                    <article class=" picture-name flex">
-                        <img class="picture-contact" src="./img/avatar_io.jpg" alt="my contact picture">
-                        <h3 >Sofia</h3>
+            </div>
+            <div class="search-contacts flex">
+                <input type="text" name="search-contacts" id="search-contacts" placeholder="&#x1F50E&#xFE0E   Cerca o inizia nuova chat">
+            </div>
+            <div class="contacts">
+                <ul>
+                    <li v-for="item in contacts" :key="index" class="flex">
+                        <img class="picture-contact" :src="item.avatar" alt="item.name">
+                        <div class="text">
+
+                            <h3>
+                                {{item.name}}
+                            </h3>
+                            <p>ultimo messaggio inviato</p>
+
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="chat-wrapper">
+                <div class="contact-chat flex">
+                    
+                    <article class="picture-name flex">
+                        <img class="picture-contact" :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name">
+                        <div class="text">
+
+                            <h3>
+                                {{contacts[activeIndex].name}}
+                            </h3>
+                            <p>ultimo accesso oggi alle 12:00</p>
+
+                        </div>
                     </article>
                     <article class="toolbar flex">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </article>
-                    
+                   
                 </div>
-                <div class="notifications">
+                
+                <div class="chat">
+                    <article class="chat-view">
+                        <div class="sent flex">
+                            <p>Hai portato a spasso il cane?</p>
+                            <p>Ricordati di stendere i panni</p>
+                        </div>
+                        <div class="received flex">
+                            <p>Tutto fatto!</p>
+                        </div>
 
+                    </article>
+                    <article class="write-message flex">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <input type="text" name="sent-message" id="sent-message" placeholder="Scrivi un messaggio">
+                        <i class="fa-solid fa-microphone"></i>
+                    </article>
                 </div>
-                <div class="search-contacts">
-
-                </div>
-                <div class="contacts">
-                    <ul>
-                        <li v-for="item in contacts" :key="index" class="flex">
-                            <img class="picture-contact" :src="item.avatar" alt="item.name">
-                            <div class="text">
-    
-                                <h3>
-                                    {{item.name}}
-                                </h3>
-                                <p>ultimo messaggio inviato</p>
-    
-                            </div>
-
-                        </li>
-                    </ul>
-                </div>
-
-            </section>
-    
-            <section class="chat-wrapper">
-                    <div class="contact-chat flex">
-                        
-                        <article class="picture-name flex">
-                            <img class="picture-contact" :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name">
-                            <div class="text">
-    
-                                <h3>
-                                    {{contacts[activeIndex].name}}
-                                </h3>
-                                <p>ultimo accesso oggi alle 12:00</p>
-    
-                            </div>
-                        </article>
-                        <article class="toolbar flex">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </article>
-                       
-                    </div>
-                    
-                    <div class="chat">
-                        <article class="chat-view">
-                            <div class="sent flex">
-                                <p>Hai portato a spasso il cane?</p>
-                                <p>Ricordati di stendere i panni</p>
-                            </div>
-                            <div class="received flex">
-                                <p>Tutto fatto!</p>
-                            </div>
-
-                        </article>
-                        <article class="write-message flex">
-                            <i class="fa-regular fa-face-smile"></i>
-                            <input type="text" name="sent-message" id="sent-message" placeholder="Scrivi un messaggio">
-                            <i class="fa-solid fa-microphone"></i>
-                        </article>
-                    </div>
-            </section>
-
-        </div>
-
-        
-
+        </section>
         
     </div>
 

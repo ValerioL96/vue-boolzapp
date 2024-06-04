@@ -10,8 +10,10 @@ body{
     font-family: "Lato", sans-serif;
     background:linear-gradient(
     to bottom,    
-    hsl(174.4deg 100% 29.41%) 15%,
-    hsl(80deg 7.69% 84.71%) 85%
+    hsl(174.4deg 100% 29.41%) 0px,
+    hsl(174.4deg 100% 29.41%) 15vh,
+    hsl(54deg 12.5% 84.31%) 15vh,
+    hsl(180deg 10% 84.31%) 100%
     );
 }
 
@@ -20,9 +22,10 @@ body{
 }
 
 div#app{
-    height: 90vh;
-    width: 80vw;
+    height: 95vh;
+    width: 80%;
     background-color: white;
+    margin: auto;
     
 }
 
@@ -30,6 +33,8 @@ div#app{
 
 section.messages-contacts{
     width: 35%;
+    height: 100%;
+    border: solid 1px gray;
 }
 
 
@@ -37,12 +42,56 @@ section.messages-contacts{
 img.picture-contact{
     width: 50px;
     border-radius: 100%;
+
 }
 
 .mycontact{
+    height: 60px;
     padding: .7rem 1rem;
     justify-content: space-between;
     background-color: hsl(0, 0%, 90%);
+}
+
+.notifications{
+        height: 60px;
+        padding: .7rem 1rem;
+        background-color: rgb(142 218 252);
+        align-items: center;
+}
+
+.notifications article.bell-slash>i{
+    background-color: white;
+    border-radius: 100%;
+    color: rgb(142 218 252);
+    padding: .7rem;
+    font-size: 1.5rem;
+}
+
+.notifications> article.active-notifications{
+    flex-direction: column;
+    margin-left: 1rem;
+    font-size: small;
+}
+
+.notifications article.active-notifications>p{
+    text-decoration: underline;
+    color: rgb(96 141 173);
+}
+
+.search-contacts{
+    height: 50px;
+    padding: .5rem 1rem;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.search-contacts>input{
+    width: 99%;
+    padding: .5rem;
+    font-size: 1rem;
+    color: rgb(189 186 187);
 }
 
 article.picture-name{
@@ -62,6 +111,11 @@ article.toolbar>i{
     margin-right: 1rem;
 }
 
+div.contacts{
+    height: calc(100% - 170px);
+    background-color: rgb(247, 206, 206);
+}
+
 div.contacts>ul{ 
     list-style-type: none;
 }
@@ -71,9 +125,12 @@ div.contacts>ul{
 
 section.chat-wrapper{
     width: 65%;
+    height: 100%;
+    border: solid 1px gray;
 }
 
 .contact-chat{
+    height: 60px;
     padding: .7rem 1rem;
     justify-content: space-between;
     background-color: hsl(0, 0%, 90%);
