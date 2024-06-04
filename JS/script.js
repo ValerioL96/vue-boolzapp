@@ -167,6 +167,8 @@
                         status: 'received'
                     }
                 ],
+
+                newTaskMessage:'',
             }
         ]
       }
@@ -174,6 +176,18 @@
     methods:{
         changeContacts: function(contactsIndex){
             this.activeIndex = contactsIndex;
-        }
+        },
+        addNewTask: function(newMessage){
+            const newTask={
+                message: newMessage,
+                status: 'sent'
+            }
+            this.contacts.push(newTask);
+            this.clearNewTask();
+          },
+  
+          clearNewTask: function(){
+            this.newTaskMessage= '';
+          }
     }
   }).mount('#app')

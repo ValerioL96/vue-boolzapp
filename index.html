@@ -109,7 +109,9 @@
                     </article>
                     <article class="write-message flex">
                         <i class="fa-regular fa-face-smile"></i>
-                        <input type="text" name="sent-message" id="sent-message" placeholder="Scrivi un messaggio">
+                        <input type="text" name="sent-message" id="sent-message" placeholder="Scrivi un messaggio" 
+                         v-model= "newTaskMessage"
+                        @keyup.enter = "addNewTask(newTaskMessage)">
                         <i class="fa-solid fa-microphone"></i>
                     </article>
                 </div>
