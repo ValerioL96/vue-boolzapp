@@ -291,4 +291,73 @@ Milestone 1
    < /div>
 
 
+Milestone 2
+
+Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
+
+
+2) Click sul contatto mostra la conversazione del contatto cliccato:
+
+2.1) aggiungo una condizione al ciclo for dei contatti, se index è uguale ad activeIndex si avrà .active altrimenti nulla:
+
+-  < div class="contacts">
+        < ul>
+            < li v-for="(item, index) in contacts" :key="index" class="flex"
+                 :class="(index === activeIndex) ? 'active' : ''">
+                < img class="picture-contact" :src="item.avatar" alt="item.name">
+                < div class="text">
+
+                    < h3>
+                        {{item.name}}
+                    < /h3>
+                    < p>ultimo messaggio inviato< /p>
+
+                < /div>
+
+            < /li>
+        < /ul>
+    < /div>
+
+2.2) creo in javascript una funzione che mi permette di aprire la chat dei contatti:
+
+-  methods:{
+        changeContacts: function(contactsIndex){
+            this.activeIndex = contactsIndex;
+        }
+    }
+
+
+2.3) aggiungo al v-for la funzione click che mi permette di svolgere l'azione del punto 2.2 ogni volta che clicco sul contatto scelto:
+
+- < div class="contacts">
+        < ul>
+            < li v-for="(item, index) in contacts" :key="index" class="flex"
+                 :class="(index === activeIndex) ? 'active' : ''"
+                 @click="changeContacts(index)">
+                < img class="picture-contact" :src="item.avatar" alt="item.name">
+                < div class="text">
+
+                    < h3>
+                        {{item.name}}
+                    < /h3>
+                    < p>ultimo messaggio inviato< /p>
+
+                < /div>
+
+            < /li>
+        < /ul>
+    < /div>
+
+
+
+
+Milestone 3
+Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+
+Milestone 4
+Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+
+
+
                     
