@@ -55,7 +55,9 @@
             </div>
             <div class="contacts">
                 <ul>
-                    <li v-for="item in contacts" :key="index" class="flex">
+                    <li v-for="(item, index) in contacts" :key="index" class="flex"
+                     :class="(index === activeIndex) ? 'active' : ''"
+                      @click="changeContacts(index)">
                         <img class="picture-contact" :src="item.avatar" alt="item.name">
                         <div class="text">
 

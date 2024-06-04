@@ -169,7 +169,11 @@
                 ],
             }
         ]
-        
       }
+    },
+    methods:{
+        changeContacts: function(contactsIndex){
+            this.activeIndex = contactsIndex;
+        }
     }
   }).mount('#app')
